@@ -1,19 +1,21 @@
-import { Dialog, DialogContent, DialogHeader, DialogTrigger } from "@/app/src/globals/components/UI/dialog"
-
+import { Drawer, DrawerContent, DrawerDescription, DrawerHeader, DrawerTitle } from "@/app/src/globals/components/UI/drawer";
+import { useLightRoom } from "../../store/useLightRoom";
+import GalleryCarrousel from "../molecules/GalleryCarrousel";
 
 const LightRoom = () => {
+  const { handleClose, isOpen } = useLightRoom();
 
   return (
-    <Dialog>
-      <DialogTrigger>a</DialogTrigger>
-      <DialogContent >
-        <DialogHeader>
-          a
-        </DialogHeader>
-        <p>hola</p>
-      </DialogContent>
-    </Dialog>
-  )
-}
+    <Drawer open={isOpen}  onOpenChange={handleClose}>
+      <DrawerContent>
+        <DrawerHeader>
+          <DrawerTitle hidden>Galeria de Imagenes</DrawerTitle>
+          <DrawerDescription hidden>Lorem</DrawerDescription>
+        </DrawerHeader>
+        <GalleryCarrousel />
+      </DrawerContent>
+    </Drawer>
+  );
+};
 
-export default LightRoom
+export default LightRoom;

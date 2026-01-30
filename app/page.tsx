@@ -1,12 +1,13 @@
 
+import PropiertyCard from "./src/globals/components/atoms/PropiertyCard";
 import { propiedades } from "./src/globals/utils/propiedades";
 
 export default function Home() {
   return (
-    <section className="mx-auto container">
-      <div className="grid grid-cols-3 gap-4">
+    <section className="mx-auto container mt-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
         {propiedades.map((propiedad) => (
-          <a href={`/propiedades/${propiedad.id}`} key={propiedad.titulo} className="p-4 shadow rounded-xl">{propiedad.titulo}</a>
+          <PropiertyCard key={propiedad.titulo} propierty={propiedad} />
         ))}
       </div>
     </section>

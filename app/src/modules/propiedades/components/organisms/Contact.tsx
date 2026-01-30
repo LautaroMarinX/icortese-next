@@ -5,12 +5,12 @@ import SaleInfoButtons from '../molecules/SaleInfoButtons'
 
 const Contact = () => {
   return (
-    <div className='ring ring-muted h-fit rounded-xl sticky top-20 p-4'>
-        <SaleInfoHead />
-        <SaleInfoData />
-        <SaleInfoButtons />
+    <div className="ring ring-muted h-fit rounded-xl xl:sticky top-24 p-4 intersect:motion-preset-fade intersect:motion-duration-700">
+      <SaleInfoHead />
+      <SaleInfoData />
+      <SaleInfoButtons />
     </div>
-  )
+  );
 }
 
 export default Contact

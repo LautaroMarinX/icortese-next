@@ -1,6 +1,10 @@
 @import "tailwindcss";
+@plugin "tailwindcss-motion";
+@plugin "tailwindcss-intersect";
 
 @custom-variant dark (&:is(.dark *));
+
+
 
 :root {
   /* --foreground: #171717; */
@@ -40,6 +44,10 @@
 
 section.container{
   @apply px-2
+}
+
+p{
+  @apply text-muted-foreground
 }
 
 @theme inline {
@@ -134,3 +142,4 @@ section.container{
     @apply bg-background text-foreground;
   }
 }
+

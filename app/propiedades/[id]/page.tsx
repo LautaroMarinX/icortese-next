@@ -1,10 +1,9 @@
 "use client"
 import { propiedades } from '@/app/src/globals/utils/propiedades';
-import AsideContent from '@/app/src/modules/propiedades/components/organisms/AsideContent';
-import Gallery from '@/app/src/modules/propiedades/components/organisms/Gallery';
-import Header from '@/app/src/modules/propiedades/components/organisms/Header';
+import PropiedadPage from '@/app/src/modules/propiedades/components/pages/Propiedad';
 import usePropiedad from '@/app/src/modules/propiedades/store/usePropiedad';
 import { useParams } from 'next/navigation';
+import { useEffect } from 'react';
 
 const Page = () => {
   const params = useParams();
@@ -14,19 +13,19 @@ const Page = () => {
 
     const {setPropiedad} = usePropiedad()
 
+    useEffect(() => {
+      if (propiedad) setPropiedad(propiedad)
+    }, [id])  
+
+
     if(!propiedad){
       return null
     }
 
-    setPropiedad(propiedad)
 
   return (
-    <section className="container mx-auto h-full">
-        <Header />
-        <Gallery />
-        <div>
-            <AsideContent />
-        </div>
+    <section className="container mx-auto">
+        <PropiedadPage />
     </section>
   );
 }

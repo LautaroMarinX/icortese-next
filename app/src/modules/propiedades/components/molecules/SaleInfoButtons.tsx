@@ -1,4 +1,4 @@
-import { Button } from '@/globals/components/UI/button'
+import { Button } from '@/app/src/globals/components/UI/button'
 import React from 'react'
 
 const SaleInfoButtons = () => {

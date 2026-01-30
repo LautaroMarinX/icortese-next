@@ -8,7 +8,7 @@ const Detail = () => {
        const propiedad = getPropiedad();
 
   return (
-    <section className="mb-8 container mx-auto">
+    <section className="mb-8 container mx-auto intersect:motion-preset-fade intersect:motion-duration-700">
       <div className="flex flex-wrap gap-6 ">
         <DetailCard
           Icon={House}

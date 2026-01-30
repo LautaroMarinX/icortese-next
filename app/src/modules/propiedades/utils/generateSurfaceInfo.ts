@@ -5,7 +5,11 @@ export const generateSurfaceInfo = () => {
   const { getPropiedad } = usePropiedad();
   const propiedad = getPropiedad();
 
-  let superficies = propiedad.superficies
+  const superficies = propiedad?.superficies
+
+  if(!superficies){
+    return null
+  }
 
   const surfaceInfo = [
     {
