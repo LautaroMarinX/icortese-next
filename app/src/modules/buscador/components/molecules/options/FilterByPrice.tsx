@@ -8,7 +8,7 @@ import { useBuscador } from '../../stores/useBuscador'
 const SelectMoneda = () => {
     const { setFilterOption, moneda } = useBuscador();
     return (
-        <Select value={moneda ?? undefined} onValueChange={(value) => setFilterOption("moneda", value)}>
+        <Select value={moneda ?? undefined} onValueChange={(value) => setFilterOption("moneda", value as typeof moneda)}>
             <SelectTrigger className='w-full'>
                 <SelectValue placeholder="Moneda" />
             </SelectTrigger>

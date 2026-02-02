@@ -24,7 +24,7 @@ const Page = () => {
 
 
   return (
-    <section className="container mx-auto">
+    <section className="container mx-auto mt-28">
         <PropiedadPage />
     </section>
   );

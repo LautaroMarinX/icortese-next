@@ -13,7 +13,7 @@ const Results = () => {
     }
  
   return (
-    <div className="h-full w-full  rounded-xl grid grid-cols-2 md:grid-cols-3 gap-4 col-span-3">
+    <div className="h-full w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 md:col-span-2 xl:col-span-3  rounded-xl gap-4">
       {resultados?.map((propiedad) => (
         <PropiertyCard key={propiedad.titulo} propierty={propiedad} />
       ))}

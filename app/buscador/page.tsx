@@ -3,7 +3,7 @@ import Buscador from '../src/modules/buscador/components/pages/Buscador'
 
 const page = () => {
   return (
-    <section className='mx-auto container mt-12'>
+    <section className='mx-auto container mt-28'>
         <Buscador />
     </section>
   )
