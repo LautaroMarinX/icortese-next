@@ -2,7 +2,7 @@ import React from 'react'
 
 const Disclaimer = () => {
   return (
-    <div className="flex flex-col px-4 container *:text-muted-foreground">
+    <div className="flex flex-col *:text-muted-foreground mb-2">
       <small className='mb-1'>
         Todas las medidas enunciadas son meramente orientativas, las medidas
         exactas serán las que se expresen en el respectivo título de propiedad

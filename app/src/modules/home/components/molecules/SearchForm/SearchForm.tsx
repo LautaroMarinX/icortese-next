@@ -30,7 +30,7 @@ const SearchForm = () => {
         <SelectPropertyType />
         <SelectLocation />
         <SelectPriceRange />
-        <Button type='submit' className='rounded-full w-full lg:size-6  lg:p-6' size={"icon-lg"}><Send /></Button>
+        <Button type='submit' className='rounded-full w-full lg:size-6  lg:p-6 hover:opacity-75 cursor-pointer' size={"icon-lg"}><Send /></Button>
     </form>
   )
 }

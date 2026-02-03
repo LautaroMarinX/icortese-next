@@ -156,7 +156,7 @@ export const propiedades: Propiedad[] = [
   },
   {
     id: "SANBENITO-LAGUNA-001",
-    titulo: "Barrio San Benito a la laguna",
+    titulo: "Barrio San Benito a la Laguna",
     operacion: "venta",
     tipo: "Casa",
     precio: {

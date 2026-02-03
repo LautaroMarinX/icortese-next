@@ -8,7 +8,7 @@ const QRShare = () => {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <Button size={"sm"}>
+        <Button size={"sm"} className='cursor-pointer'>
           QR <QrCode />
         </Button>
       </AlertDialogTrigger>

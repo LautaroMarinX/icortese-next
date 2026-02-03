@@ -1,5 +1,5 @@
 import { Button } from '@/app/src/globals/components/UI/button';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, SparklesIcon } from 'lucide-react';
 import Link from 'next/link';
 
 const BannerText = () => {
@@ -13,11 +13,12 @@ const BannerText = () => {
           laborum.
         </p>
         <div className="flex flex-row gap-2 flex-wrap">
-          <Button asChild>
+          <Button variant={"secondary"} asChild>
             <Link href={"/buscador"}>
               Explorar catálogo <ArrowUpRight />
             </Link>
           </Button>
+          <Button  variant={"default"}>Busca con Cortese IA <SparklesIcon /></Button>
         </div>
       </div>
     </div>
