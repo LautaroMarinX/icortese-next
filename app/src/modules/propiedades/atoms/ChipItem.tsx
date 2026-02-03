@@ -1,4 +1,4 @@
-import { Badge } from '@/globals/components/UI/badge';
+import { Badge } from '@/app/src/globals/components/UI/badge';
 import React from 'react'
 
 type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>

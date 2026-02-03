@@ -7,11 +7,13 @@ interface SecondaryImagesProps{
 
 const SecondaryImages = ({images}: SecondaryImagesProps) => {
 
+    const { setIndexSelect } = useLightRoom();
+
+
     if(!images){
         return null
     }
 
-    const {setIndexSelect} = useLightRoom();
 
 
 
@@ -19,7 +21,7 @@ const SecondaryImages = ({images}: SecondaryImagesProps) => {
     <div className="grid grid-cols-2 gap-4">
       {images.map((image, index) => (
         <Image
-          onClick={() => setIndexSelect(index + 1)}
+          onClick={() => setIndexSelect && setIndexSelect(index + 1)}
           width={600}
           height={600}
           key={image}

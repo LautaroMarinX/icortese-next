@@ -3,7 +3,7 @@ import ValuesCard from '../atoms/ValuesCard';
 
 const Values = () => {
   return (
-    <section className="mb-28 container mx-auto">
+    <section className="mb-28 container mx-auto intersect:motion-preset-fade intersect:motion-duration-700">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         <ValuesCard
           title="Misión"

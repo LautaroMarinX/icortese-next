@@ -23,7 +23,7 @@ const SelectMoneda = () => {
 
 const PriceRange = () => {
     const { setFilterOption, valor } = useBuscador();
-    const [min, max] = valor ?? ["", ""];
+    const [min, max] = valor ?? [null, null];
 
     const handleMinChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newMin = e.target.value ? Number(e.target.value) : null;

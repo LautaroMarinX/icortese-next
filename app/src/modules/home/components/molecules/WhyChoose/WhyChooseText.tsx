@@ -3,7 +3,7 @@ import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const WhyChooseText = () => {
+const WhyChooseText = ({ hiddenButton = false }: { hiddenButton?: boolean }) => {
   return (
     <div className="flex flex-col-reverse justify-between md:flex-col col-span-1">
       <div className="flex flex-col my-8 md:my-0  md:mb-12">
@@ -13,11 +13,13 @@ const WhyChooseText = () => {
           venta e inversión de propiedades, con un enfoque profesional,
           transparente y orientado a resultados.
         </p>
-        <Button className="w-fit" asChild>
-          <Link href={"/sobre-nosotros"}>
-            Conocer más <ArrowUpRight />
-          </Link>
-        </Button>
+        {!hiddenButton && (
+          <Button className="w-fit" asChild>
+            <Link href={"/sobre-nosotros"}>
+              Conocer más <ArrowUpRight />
+            </Link>
+          </Button>
+        )}
       </div>
       <Image
         src={"/images/building.jpg"}
@@ -28,6 +30,6 @@ const WhyChooseText = () => {
       />
     </div>
   );
-}
+};
 
 export default WhyChooseText

@@ -1,4 +1,3 @@
-import { Badge } from "@/globals/components/UI/badge";
 import { Check } from "lucide-react";
 import React from "react";
 

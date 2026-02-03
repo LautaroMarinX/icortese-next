@@ -7,10 +7,10 @@ import { useMultiSelectFilter } from "../../../hooks/useMultiSelectFilter";
 import { X } from "lucide-react";
 import FilterBadge from "../../atoms/FilterBadge";
 
-const generateUbicacionFilter = () => {
+export const generateUbicacionFilter = () => {
     
     const ubicaciones = propiedades.map((propiedad) => propiedad.ubicacion.barrio);
-    const ubicacionesUnicas = []
+    const ubicacionesUnicas: string[] = []
 
     ubicaciones.forEach((ubicacion) => {
         console.log(ubicacion);

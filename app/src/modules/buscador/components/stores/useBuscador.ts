@@ -12,8 +12,8 @@ interface useBuscadorProps {
     resultados: Propiedad[] | null;
     operacion: FilterOptions["operacion"][] | null;
     tipo: FilterOptions["tipo"][] | null;
-    moneda: FilterOptions["precio"]["moneda"] | null;
-    valor: [number, number] | null; //Minimo y maximo
+    moneda: FilterOptions["moneda"] | null;
+    valor: [number | null, number | null] | null; //Minimo y maximo
     ubicacion: FilterOptions["ubicacion"]["barrio"][] | null;
     estado: FilterOptions["estado"] | null;
     caracteristicas: FilterOptions["caracteristicas"] | null;
@@ -23,6 +23,7 @@ interface useBuscadorProps {
     setResultados: (resultados: Propiedad[] | null) => void;
     clearFilters: () => void;
     setFilterOptions: (filters: Partial<useBuscadorProps>) => void;
+    initializeFiltersFromURL: (filters: Partial<useBuscadorProps>) => void;
 }
 
 export const useBuscador = create<useBuscadorProps>(() => ({
@@ -40,7 +41,7 @@ export const useBuscador = create<useBuscadorProps>(() => ({
     useBuscador.setState((state) => {
       const newFilters = { ...state, [key]: value };
       // Extraer solo los filtros
-      const filters: Partial<FilterOptions> = {
+      const filters = {
         operacion: newFilters.operacion,
         tipo: newFilters.tipo,
         moneda: newFilters.moneda,
@@ -92,5 +93,21 @@ export const useBuscador = create<useBuscadorProps>(() => ({
         caracteristicas: null,
         ambientes: null,
       })),
+
+    initializeFiltersFromURL: (filters) =>
+      useBuscador.setState((state) => {
+        const newFilters = { ...state, ...filters };
+        const filterKeys = [
+          "operacion", "tipo", "moneda", "valor", "ubicacion", "estado", "caracteristicas", "ambientes"
+        ];
+        const filtersForResults = Object.fromEntries(
+          filterKeys.map((k) => [k, (newFilters as any)[k]])
+        );
+        const nuevosResultados = generateResultadosByFilters(propiedades, filtersForResults);
+        return {
+          ...newFilters,
+          resultados: nuevosResultados,
+        };
+      }),
 
 }));
