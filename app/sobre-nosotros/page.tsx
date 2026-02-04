@@ -10,7 +10,7 @@ const page = () => {
         <div className="flex flex-col mb-8 max-w-200">
           <h1 className="text-4xl mb-2">Quiénes somos</h1>
           <p className="mb-2">
-            Somos una inmobiliaria con más de X años de trayectoria en el
+            Somos una inmobiliaria con más de 20 años de trayectoria en el
             mercado argentino, especializada en operaciones de compraventa,
             alquiler y desarrollos inmobiliarios en CABA y Zona Norte.
           </p>

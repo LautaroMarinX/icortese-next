@@ -1,6 +1,6 @@
 "use client"
 import { Button } from '@/app/src/globals/components/UI/button'
-import { Send } from 'lucide-react'
+import { SearchIcon } from 'lucide-react'
 import SelectPropertyType from './SelectPropertyType'
 import SelectLocation from './SelectLocation'
 import { SelectPriceRange } from './SelectPriceRange'
@@ -30,7 +30,7 @@ const SearchForm = () => {
         <SelectPropertyType />
         <SelectLocation />
         <SelectPriceRange />
-        <Button type='submit' className='rounded-full w-full lg:size-6  lg:p-6 hover:opacity-75 cursor-pointer' size={"icon-lg"}><Send /></Button>
+        <Button type='submit' className='rounded-full w-full lg:size-6  lg:p-6 hover:opacity-75 cursor-pointer' size={"icon-lg"}><SearchIcon /></Button>
     </form>
   )
 }

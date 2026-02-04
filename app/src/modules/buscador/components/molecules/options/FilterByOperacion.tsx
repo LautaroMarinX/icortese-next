@@ -1,9 +1,9 @@
 "use client";
-import FilterBadge from "@/app/src/modules/buscador/components/atoms/FilterBadge";
 import { operaciones } from "@/app/src/globals/types/Propiedad";
 import { useBuscador } from "../../stores/useBuscador";
 import FilterWrapper from "./FilterWrapper";
 import { useMultiSelectFilter } from "@/app/src/modules/buscador/hooks/useMultiSelectFilter";
+import FilterButton from "@/app/src/modules/buscador/components/atoms/FilterButton";
 
 
 
@@ -17,13 +17,13 @@ export const FilterByOperacion = () => {
     <FilterWrapper titulo="Operación">
       <div className="flex row gap-2">
         {operaciones.map((op) => (
-          <FilterBadge
+          <FilterButton
             included={selected.includes(op)}
             onClick={() => handleToggle(op)}
             key={op}
           >
             {op}
-          </FilterBadge>
+          </FilterButton>
         ))}
       </div>
     </FilterWrapper>

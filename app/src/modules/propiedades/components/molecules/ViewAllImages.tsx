@@ -10,7 +10,7 @@ const ViewAllImages = () => {
 
   return (
     <div className='w-fit h-fit bottom-0 right-0 bg-black absolute rounded-xl'>
-        <Button onClick={handleOpen} variant={"outline"} className='cursor-pointer'>Ver todas las Imagenes <Image/></Button>
+        <Button onClick={handleOpen} variant={"outline"} className='cursor-pointer'>Ver todas las Imágenes <Image/></Button>
     </div>
   )
 }

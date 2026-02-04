@@ -10,7 +10,7 @@ export interface FeatureProps {
 export const features: FeatureProps[] = [
   {
     icon: House,
-    title: "+10",
+    title: "+20",
     description: "Años de experiencia en el sector inmobiliario.",
   },
   {

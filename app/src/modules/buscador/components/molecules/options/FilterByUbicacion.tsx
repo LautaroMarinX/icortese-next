@@ -1,11 +1,10 @@
 "use client";
-import { Badge } from "@/app/src/globals/components/UI/badge";
 import { useBuscador } from "../../stores/useBuscador";
 import { propiedades } from "@/app/src/globals/utils/propiedades";
 import FilterWrapper from "./FilterWrapper";
 import { useMultiSelectFilter } from "../../../hooks/useMultiSelectFilter";
 import { X } from "lucide-react";
-import FilterBadge from "../../atoms/FilterBadge";
+import FilterButton from "../../atoms/FilterButton";
 
 export const generateUbicacionFilter = () => {
     
@@ -35,15 +34,18 @@ export const FilterByUbicacion = () => {
 
   return (
     <FilterWrapper titulo="Ubicación">
-<div className="flex row gap-2">
+      <div className="flex row gap-2">
         {ubicacionesMap.map((ubi) => (
-          <FilterBadge included={selected.includes(ubi)} onClick={() => handleToggle(ubi)} key={ubi }>
+          <FilterButton
+            included={selected.includes(ubi)}
+            onClick={() => handleToggle(ubi)}
+            key={ubi}
+          >
             {ubi}
-          </FilterBadge>
+          </FilterButton>
         ))}
       </div>
     </FilterWrapper>
-   
   );
 };
 

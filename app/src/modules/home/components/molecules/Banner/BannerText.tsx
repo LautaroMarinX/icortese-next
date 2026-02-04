@@ -8,9 +8,8 @@ const BannerText = () => {
       <div className="flex flex-col h-full justify-center max-w-200 ">
         <h1 className="text-5xl mb-2">Encuentra tu futuro inmueble </h1>
         <p className="mb-2 text-balance">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic magnam
-          rem voluptate fugiat cupiditate in voluptas dolores eius ipsam
-          laborum.
+          Combinamos experiencia inmobiliaria con tecnología para ayudarte a
+          encontrar oportunidades reales y tomar mejores decisiones.
         </p>
         <div className="flex flex-row gap-2 flex-wrap">
           <Button variant={"secondary"} asChild>
@@ -18,7 +17,9 @@ const BannerText = () => {
               Explorar catálogo <ArrowUpRight />
             </Link>
           </Button>
-          <Button  variant={"default"}>Busca con Cortese IA <SparklesIcon /></Button>
+          <Button variant={"default"}>
+            Busca con Cortese IA <SparklesIcon />
+          </Button>
         </div>
       </div>
     </div>

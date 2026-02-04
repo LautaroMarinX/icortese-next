@@ -9,8 +9,8 @@ const LightRoom = () => {
     <Drawer open={isOpen}  onOpenChange={handleClose}>
       <DrawerContent>
         <DrawerHeader>
-          <DrawerTitle hidden>Galeria de Imagenes</DrawerTitle>
-          <DrawerDescription hidden>Lorem</DrawerDescription>
+          <DrawerTitle hidden>Galeria de Imágenes</DrawerTitle>
+          <DrawerDescription hidden>Galeria de imágenes de Cortese</DrawerDescription>
         </DrawerHeader>
         <GalleryCarrousel />
       </DrawerContent>

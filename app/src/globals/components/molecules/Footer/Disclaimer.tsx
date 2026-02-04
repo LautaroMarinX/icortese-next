@@ -9,7 +9,7 @@ const Disclaimer = () => {
         de cada inmueble.
       </small>
       <small>
-        Todas las fotos, imagenes y videos son meramente ilustrativos y no
+        Todas las fotos, imágenes y videos son meramente ilustrativos y no
         contractuales. Los precios enunciados son meramente orientativos y no
         contractuales.
       </small>
