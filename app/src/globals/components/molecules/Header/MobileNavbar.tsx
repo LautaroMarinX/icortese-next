@@ -1,13 +1,13 @@
 import { links } from '../../../utils/links'
 import { LinkItem } from '../../atoms/LinkItem'
 import { Button } from '../../UI/button'
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '../../UI/sheet'
+import { Sheet, SheetClose, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '../../UI/sheet'
 import { Menu } from 'lucide-react'
 
 const MobileNavbar = () => {
   return (
     <Sheet>
-      <SheetTrigger asChild className='block lg:hidden'>
+      <SheetTrigger asChild className="block lg:hidden">
         <Button variant={"secondary"} size={"icon"}>
           <Menu />
         </Button>
@@ -21,7 +21,14 @@ const MobileNavbar = () => {
         </SheetHeader>
         <div className="flex flex-col gap-2 px-2">
           {links.map((link) => (
-            <LinkItem variant='ghost' className='flex! justify-start' key={link.label} link={link} />
+            <SheetClose key={link.label}>
+              <LinkItem
+                variant="ghost"
+                className="flex! w-full justify-start"
+                link={link}
+                key={link.label}
+              />
+            </SheetClose>
           ))}
         </div>
       </SheetContent>
