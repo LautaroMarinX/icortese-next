@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Logo from "../atoms/Logo"
+import Navbar from "../molecules/Header/Navbar";
 
 const Header = () => {
   return (
@@ -8,6 +9,7 @@ const Header = () => {
         <Link href="/" className="group">
           <Logo />
         </Link>
+        <Navbar />
       </div>
     </header>
   );

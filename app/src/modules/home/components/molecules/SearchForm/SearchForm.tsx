@@ -22,7 +22,7 @@ const SearchForm = () => {
     if (precio_desde !== null) params.append('valorMin', precio_desde.toString())
     if (precio_hasta !== null) params.append('valorMax', precio_hasta.toString())
     
-    router.push(`/buscador?${params.toString()}`)
+    router.replace(`/buscador?${params.toString()}`)
   }
 
   return (

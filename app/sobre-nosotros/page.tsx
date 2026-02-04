@@ -4,13 +4,11 @@ import AboutUsText from '../src/modules/sobre-nosotros/components/molecules/Abou
 
 const page = () => {
   return (
-    <>
-      <section className="mt-28 ">
+      <main className="mt-28 ">
         <AboutUsText />
         <Values />
         <WhyChoose hiddenButton />
-      </section>
-    </>
+      </main>
   );
 }
 

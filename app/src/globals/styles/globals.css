@@ -42,7 +42,7 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
-section.container{
+section.container, main.container{
   @apply px-2
 }
 
