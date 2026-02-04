@@ -17,7 +17,7 @@ import { Button } from "@/app/src/globals/components/UI/button";
 
 const DesktopFilter = () => {
   return (
-    <div className="flex flex-col justify-between h-fit  ring ring-muted rounded-xl p-4 intersect:motion-preset-fade intersect:motion-duration-700">
+    <div className="flex flex-col justify-between h-fit ring ring-muted rounded-xl p-4 intersect:motion-preset-fade intersect:motion-duration-700">
       <div className="flex flex-col mb-2 pb-2">
         <h2>Filtros</h2>
       </div>
@@ -61,13 +61,14 @@ const MobileFilter = () => {
 const Filters = () => {
   const isDesktop = useMediaQuery({ minWidth: 1024 });
 
-  if (isDesktop) {
-    return <DesktopFilter />;
-  }
+  if(isDesktop === null) return null;
 
-  if (!isDesktop) {
-    return <MobileFilter />;
-  }
+  return (
+    isDesktop ? <DesktopFilter /> : <MobileFilter />
+  )
+
+
+ 
 };
 
 export default Filters;

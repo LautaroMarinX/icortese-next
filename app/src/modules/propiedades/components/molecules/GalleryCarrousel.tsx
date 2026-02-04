@@ -45,6 +45,7 @@ const EmblaButtons = ({ emblaApi }: { emblaApi?: unknown | null }) => {
   return (
     <div className="flex">
       <Button
+        aria-label="Boton de retroceso en la galería"
         variant={"secondary"}
         disabled={!canPrev}
         className="rounded-e-none cursor-pointer"
@@ -53,6 +54,7 @@ const EmblaButtons = ({ emblaApi }: { emblaApi?: unknown | null }) => {
         <ChevronLeft />
       </Button>
       <Button
+        aria-label="Boton de avance en la galería"
         variant={"secondary"}
         disabled={!canNext}
         className="rounded-s-none cursor-pointer"

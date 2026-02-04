@@ -22,7 +22,7 @@ const WhyChooseText = ({ hiddenButton = false }: { hiddenButton?: boolean }) => 
         )}
       </div>
       <Image
-        src={"/images/building.jpg"}
+        src={"/images/building.webp"}
         width={400}
         height={400}
         alt="Imagen de construcción"

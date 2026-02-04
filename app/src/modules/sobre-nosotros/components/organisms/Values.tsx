@@ -3,7 +3,7 @@ import ValuesCard from '../atoms/ValuesCard';
 
 const Values = () => {
   return (
-    <section className="mb-28 mt-14 bg-[url(/images/about.jpg)] bg-cover flex items-end  mx-auto intersect:motion-preset-fade intersect:motion-duration-700">
+    <section className="mb-28 mt-14 bg-[url(/images/about.webp)] bg-cover flex items-end  mx-auto intersect:motion-preset-fade intersect:motion-duration-700">
       <div className='flex h-fit my-20 lg:my-0 px-2 lg:h-120 items-end container mx-auto'>
         <div className="grid grid-cols-1  h-fit my-4 lg:grid-cols-3 gap-4 ">
           <ValuesCard

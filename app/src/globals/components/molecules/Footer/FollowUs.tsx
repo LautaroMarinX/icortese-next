@@ -11,7 +11,7 @@ const FollowUs = () => {
       <div className="flex flex-col">
         <h3 className="mb-2 text-xl">Asociados con</h3>
         <Image
-          src="/images/cucicba.jpg"
+          src="/images/cucicba.webp"
           alt="Logo de Cucicba"
           className="rounded-md"
           width={100}

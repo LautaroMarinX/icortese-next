@@ -34,6 +34,7 @@ const SocialMedia = () => {
 
   return socialMediaList.map((media) => (
     <a
+    aria-label="Link de Red Social"
       key={media.href}
       className="p-2 bg-white hover:opacity-50 duration-300 rounded-md"
       href={media.href}

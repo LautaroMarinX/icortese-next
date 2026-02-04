@@ -26,6 +26,7 @@ const SecondaryImages = ({images}: SecondaryImagesProps) => {
           height={600}
           key={image}
           src={image}
+          loading='lazy'
           className="object-cover w-full rounded-xl hover:shadow-xl  duration-300 hover:scale-102 cursor-pointer "
           alt={"Imagen numero " + index + 1}
         />

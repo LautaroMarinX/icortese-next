@@ -20,6 +20,7 @@ const PropiertyCard = ({ propierty }: PropiertyCardProps) => {
           className="rounded-xl object-cover aspect-4/3 w-full mb-2 group-hover:scale-102 group-hover:shadow-xl duration-300"
           width={500}
           height={500}
+          loading='lazy'
           src={propierty.imagenes[0] || ""}
           alt={`Imagen de ${propierty.titulo || "propiedad"}`}
         />

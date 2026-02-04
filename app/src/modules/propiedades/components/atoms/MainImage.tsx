@@ -13,6 +13,7 @@ const MainImage = ({image}: {image: string | null}) => {
 
   return (
     <Image height={600} width={600}
+    loading='eager'
     onClick={handleOpen}
      src={image} alt='Imagen principal' className=' hover:shadow-xl hover:scale-102 cursor-pointer duration-300 w-full object-cover rounded-xl' />
   )
