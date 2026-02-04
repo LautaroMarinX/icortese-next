@@ -7,7 +7,7 @@ interface ListItemProps {
     value: {
         Icon?: IconComponent;
         label: string;
-        value: string | number;
+    value?: string | number | boolean | null;
     }
 }
 

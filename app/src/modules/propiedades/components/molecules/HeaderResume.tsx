@@ -12,13 +12,13 @@ const HeaderResume = () => {
     <ul className="flex *:px-2 *:first:ps-0 *:last:border-0 *:border-r">
       <HeaderResumeItem
         caracteristica="Baños"
-        cantidad={propiedad?.caracteristicas.banios || 0}
+        cantidad={propiedad?.caracteristicas.banos || 0}
       />
       <HeaderResumeItem
         caracteristica="Ambientes"
-        cantidad={propiedad?.caracteristicas.ambientes}
+        cantidad={propiedad?.caracteristicas.ambientes || 0}
       />
-      <HeaderResumeItem caracteristica={"Dormitorios"} cantidad={propiedad?.caracteristicas.dormitorios} />
+      <HeaderResumeItem caracteristica={"Dormitorios"} cantidad={propiedad?.caracteristicas.dormitorios || 0} />
         <HeaderResumeItem caracteristica={"Cocheras"} cantidad={propiedad?.caracteristicas.cocheras || 0} />
     </ul>
   );

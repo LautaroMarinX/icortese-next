@@ -4,11 +4,11 @@ import React, { Activity } from 'react'
 interface InfoItem {
   Icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   label: string;
-  value: string | number | boolean;
+  value?: string | number | boolean | null;
 }
 
 interface InformationRenderProps {
-  info: InfoItem[];
+  info: InfoItem[] | null | undefined;
   className?: string;
   title: string;
   Element: React.ComponentType<{ value: InfoItem }>;

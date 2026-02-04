@@ -1,7 +1,18 @@
 
 
 import { useEffect, useState, useCallback } from "react";
-import useEmblaCarousel, { UseEmblaCarouselType } from "embla-carousel-react";
+import useEmblaCarousel from "embla-carousel-react";
+
+interface MinimalEmbla {
+  canScrollPrev?: () => boolean;
+  canScrollNext?: () => boolean;
+  scrollPrev?: () => void;
+  scrollNext?: () => void;
+  on?: (eventName: string, cb: () => void) => void;
+  off?: (eventName: string, cb: () => void) => void;
+  scrollTo?: (index: number) => void;
+}
+
 import usePropiedad from "../../store/usePropiedad";
 import Image from "next/image";
 import { useLightRoom } from "../../store/useLightRoom";
@@ -9,23 +20,25 @@ import { Button } from "@/app/src/globals/components/UI/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 
-const EmblaButtons = ({ emblaApi }: { emblaApi: UseEmblaCarouselType }) => {
+const EmblaButtons = ({ emblaApi }: { emblaApi?: unknown | null }) => {
   const [canPrev, setCanPrev] = useState(false);
   const [canNext, setCanNext] = useState(false);
 
   const updateButtons = useCallback(() => {
-    setCanPrev(!!emblaApi?.canScrollPrev());
-    setCanNext(!!emblaApi?.canScrollNext());
+    const api = emblaApi as unknown as MinimalEmbla;
+    setCanPrev(!!api?.canScrollPrev?.());
+    setCanNext(!!api?.canScrollNext?.());
   }, [emblaApi]);
 
   useEffect(() => {
     if (!emblaApi) return;
-    updateButtons();
-    emblaApi.on('select', updateButtons);
-    emblaApi.on('reInit', updateButtons);
+    setTimeout(() => updateButtons(), 0);
+    const api = emblaApi as unknown as MinimalEmbla;
+    api.on?.('select', updateButtons);
+    api.on?.('reInit', updateButtons);
     return () => {
-      emblaApi.off('select', updateButtons);
-      emblaApi.off('reInit', updateButtons);
+      api.off?.('select', updateButtons);
+      api.off?.('reInit', updateButtons);
     };
   }, [emblaApi, updateButtons]);
 
@@ -35,7 +48,7 @@ const EmblaButtons = ({ emblaApi }: { emblaApi: UseEmblaCarouselType }) => {
         variant={"secondary"}
         disabled={!canPrev}
         className="rounded-e-none cursor-pointer"
-        onClick={() => emblaApi?.scrollPrev()}
+        onClick={() => (emblaApi as unknown as MinimalEmbla)?.scrollPrev?.()}
       >
         <ChevronLeft />
       </Button>
@@ -43,7 +56,7 @@ const EmblaButtons = ({ emblaApi }: { emblaApi: UseEmblaCarouselType }) => {
         variant={"secondary"}
         disabled={!canNext}
         className="rounded-s-none cursor-pointer"
-        onClick={() => emblaApi?.scrollNext()}
+        onClick={() => (emblaApi as unknown as MinimalEmbla)?.scrollNext?.()}
       >
         <ChevronRight />
       </Button>
@@ -61,11 +74,11 @@ const GalleryCarrousel = () => {
 
   const imagenes = getPropiedad()?.imagenes;
 
-      useEffect(() => {
+        useEffect(() => {
           if(emblaApi && indexSelect){
-              emblaApi.scrollTo(indexSelect)
+            (emblaApi as unknown as MinimalEmbla).scrollTo?.(indexSelect)
           }
-      }, [emblaApi, indexSelect])
+        }, [emblaApi, indexSelect])
 
   return (
     <div className="h-fit mb-8 md:mb-12">

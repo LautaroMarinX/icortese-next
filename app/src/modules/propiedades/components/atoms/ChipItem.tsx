@@ -5,9 +5,9 @@ type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>
 
 interface ListItemProps {
     value: {
-        Icon?: IconComponent;
-        label: string;
-        value: string | number;
+      Icon?: IconComponent;
+      label: string;
+      value?: string | number | boolean | null;
     }
 }
 

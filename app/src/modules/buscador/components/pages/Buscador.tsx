@@ -25,7 +25,7 @@ const Buscador = () => {
   useEffect(() => {
     const filtersFromURL = queryParamsToFilters(searchParams);
     initializeFiltersFromURL(filtersFromURL);
-  }, []); // Solo se ejecuta al montar
+  }, [initializeFiltersFromURL, searchParams]); // Ejecuta al montar y cuando cambian los searchParams
 
   // Actualizar URL cuando cambien los filtros
   useEffect(() => {
@@ -42,17 +42,20 @@ const Buscador = () => {
     
     const params = filtersToQueryParams(filters);
     const queryString = params.toString();
-    
+    // Evitar reemplazar la URL si ya coincide (previene bucles de navegación)
+    const currentQuery = searchParams?.toString?.() || '';
+    if (currentQuery === queryString) return;
+
     // Actualizar la URL sin recargar la página
     if (queryString) {
       router.replace(`/buscador?${queryString}`, { scroll: false });
     } else {
       router.replace('/buscador', { scroll: false });
     }
-  }, [operacion, tipo, moneda, valor, ubicacion, estado, caracteristicas, ambientes, router]);
+  }, [operacion, tipo, moneda, valor, ubicacion, estado, caracteristicas, ambientes, router, searchParams]);
 
   return (
-      <div className='grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4'>
+      <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         <Filters />
         <Results />
       </div>

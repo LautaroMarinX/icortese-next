@@ -9,8 +9,8 @@ const SaleInfoData = () => {
 
   return (
     <ul className='flex flex-col gap-2 mb-4'>
-      <SaleInfoListItem title='Tipo de operación' value={propiedad?.operacion} />
-      <SaleInfoListItem  title="Ubicación" value={propiedad?.ubicacion.barrio} />
+      <SaleInfoListItem title='Tipo de operación' value={propiedad?.operacion || ""} />
+      <SaleInfoListItem  title="Ubicación" value={propiedad?.ubicacion.barrio || ""} />
     </ul>
   )
 }

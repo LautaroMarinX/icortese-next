@@ -10,7 +10,7 @@ const WhatsAppContact = () => {
 
   const generateWhatsAppLink = () => {
     const message = encodeURIComponent(`Hola, estoy interesado en obtener más información sobre la propiedad ${propiedad?.titulo} ubicada en ${propiedad?.ubicacion.barrio}, ${propiedad?.ubicacion.ciudad}. ¿Podrías proporcionarme más detalles?`);
-    const whatsAppNumber = import.meta.NEXT_PUBLIC_WHATSAPP_NUMBER=5491141498300
+    const whatsAppNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER
 ;
 
     const baseURL = `https://wa.me/${whatsAppNumber}?text=${message}`;
