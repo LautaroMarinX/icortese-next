@@ -1,14 +1,9 @@
-import Values from '../src/modules/sobre-nosotros/components/organisms/Values'
-import WhyChoose from '../src/modules/home/components/organisms/WhyChoose'
-import AboutUsText from '../src/modules/sobre-nosotros/components/molecules/AboutUsText';
+
+import SobreNosotros from '../src/modules/sobre-nosotros/components/pages/SobreNosotros';
 
 const page = () => {
   return (
-      <main className="mt-28 ">
-        <AboutUsText />
-        <Values />
-        <WhyChoose hiddenButton />
-      </main>
+      <SobreNosotros />
   );
 }
 

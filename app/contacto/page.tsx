@@ -2,7 +2,7 @@ import Contacto from '../src/modules/contacto/components/pages/Contacto'
 
 const page = () => {
   return (
-    <main>
+    <main className='my-28'>
         <Contacto />
     </main>
   )

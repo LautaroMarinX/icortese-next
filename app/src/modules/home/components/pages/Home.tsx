@@ -6,7 +6,7 @@ import WhyChoose from "../organisms/WhyChoose";
 
 const HomePage = () => {
   return (
-    <main>
+    <main className="my-28">
       <Banner />
       <Search />
       <FeaturesPropertys />

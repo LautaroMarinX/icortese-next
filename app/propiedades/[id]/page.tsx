@@ -24,7 +24,7 @@ const Page = () => {
 
 
   return (
-    <main className="container mx-auto mt-28">
+    <main className="container mx-auto my-28">
         <PropiedadPage />
     </main>
   );

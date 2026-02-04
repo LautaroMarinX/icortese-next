@@ -5,7 +5,7 @@ import BuscadorSuspense from '../src/modules/buscador/components/pages/BuscadorS
 
 const page = () => {
   return (
-    <main className="mx-auto container mt-28">
+    <main className="mx-auto container my-28">
       <Suspense fallback={<BuscadorSuspense />}>
         <Buscador />
       </Suspense>
