@@ -85,7 +85,7 @@ const GalleryCarrousel = () => {
   return (
     <div className="h-fit mb-8 md:mb-12">
       <div
-        className="container flex flex-col gap-4 mx-auto h-fit overflow-hidden"
+        className="flex flex-col gap-4 mx-auto h-fit container"
         ref={emblaRef}
       >
         <div className="w-full h-full px-2 flex gap-4 container">

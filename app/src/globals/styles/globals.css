@@ -142,3 +142,7 @@ p{
   }
 }
 
+
+body{
+  overflow-x: hidden;
+}
