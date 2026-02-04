@@ -34,7 +34,7 @@ export const FilterByUbicacion = () => {
 
   return (
     <FilterWrapper titulo="Ubicación">
-      <div className="flex row gap-2">
+      <div className="flex flex-row flex-wrap gap-2">
         {ubicacionesMap.map((ubi) => (
           <FilterButton
             included={selected.includes(ubi)}

@@ -24,7 +24,7 @@ export const LinkItem = ({className, variant = "ghost", link}: LinkItemProps) =>
   }, [link.href, clearFilters, router])
 
   return (
-    <Button onClick={handleClick} className={className ? className : ""} size={"sm"} variant={variant || "ghost"}>
+    <Button onClick={handleClick} className={className ? className  : ""} size={"sm"} variant={variant || "ghost"}>
       {link.label}
     </Button>
   );

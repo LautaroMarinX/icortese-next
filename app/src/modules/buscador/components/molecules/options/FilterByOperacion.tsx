@@ -15,7 +15,7 @@ export const FilterByOperacion = () => {
 
   return (
     <FilterWrapper titulo="Operación">
-      <div className="flex row gap-2">
+      <div className="flex flex-row flex-wrap gap-2">
         {operaciones.map((op) => (
           <FilterButton
             included={selected.includes(op)}
