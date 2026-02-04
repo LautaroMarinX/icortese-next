@@ -7,7 +7,7 @@ interface ValuesCardProps {
 
 const ValuesCard = ({title, description}: ValuesCardProps) => {
   return (
-    <div className='ring ring-muted flex flex-col p-4 rounded-2xl justify-between'>
+    <div className='ring ring-muted bg-white flex flex-col p-4 rounded-2xl justify-between'>
         <h2 className='mb-12 text-2xl'>{title}</h2>
         <p>{description}</p>
     </div>
