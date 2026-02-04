@@ -2,6 +2,9 @@ import LogoWrapper from "../molecules/Footer/LogoWrapper";
 import Explore from "../molecules/Footer/Explore";
 import LocationInfo from "../molecules/Footer/LocationInfo";
 import ContactInfo from "../molecules/Footer/ContactInfo";
+import Disclaimer from "../molecules/Footer/Disclaimer";
+import Copyright from "../molecules/Footer/Copyright";
+import DevelopmentBy from "../molecules/Footer/DevelopmentBy";
 
 
 const Footer = () => {
@@ -12,6 +15,11 @@ const Footer = () => {
         <LocationInfo />
         <ContactInfo />
         <Explore />
+      </div>
+      <div className="flex flex-col px-2 container mx-auto">
+        <Disclaimer />
+        <Copyright />
+        <DevelopmentBy />
       </div>
     </footer>
   );

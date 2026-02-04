@@ -9,7 +9,7 @@ const Sucursales = () => {
         <CardWithLogo icon={MapPin} label="Charcas 4045, CABA" />
         <CardWithLogo
           icon={MapPin}
-          label="Calle del Caminante 30, OF. 541, Nordelta, Tigres"
+          label="Calle del Caminante 30, OF. 541, Nordelta, Tigre"
         />
       </div>
     </div>
