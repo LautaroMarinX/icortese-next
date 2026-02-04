@@ -10,7 +10,7 @@ const Header = () => {
     const propiedad = getPropiedad();
 
   return (
-    <section className="container mt-16 mb-8 mx-auto intersect:motion-preset-fade intersect:motion-duration-700">
+    <section className="container mb-8 mx-auto intersect:motion-preset-fade intersect:motion-duration-700">
       <div className='flex flex-col xl:flex-row flex-wrap gap-2 xl:items-center justify-between'>
         <div className="flex flex-col">
           <div className="flex flex-wrap gap-2 mb-2">

@@ -142,7 +142,7 @@ p{
   }
 }
 
-
-body{
-  overflow-x: hidden;
+main{
+  @apply overflow-x-hidden
 }
+
